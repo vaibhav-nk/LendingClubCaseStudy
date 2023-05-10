@@ -7,16 +7,10 @@
 * [Data Understanding](#data-Understanding)
 * [Data Cleaning](#Data-Cleaning)
 * [Data Correction](#Data-Correction)
-
 * [Derived Metrics](#Derived-Metrics)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
-
+* [Data Filtering](#Data-Filtering)
+* [Graph Plotting](#Graph Plotting)
+* 
 <!-- You can include any other section that is pertinent to your problem -->
 
 ## python-libraries
@@ -75,10 +69,28 @@
   The feature issue_d converted into continuous feature like month and year.
   loan_df['issue_month'] = loan_df.issue_d.apply(lambda x: int(datetime.strptime(x.split('-')[0], '%b').month))
   loan_df['issue_year'] = loan_df.issue_d.apply(lambda x: int(x.split('-')[1]))
+  
+## Data Filtering
+- Loan status:
+  Loan status has 3 values as 'Fully Paid', 'Current', 'Charged Off'.
+  Application with loan status as 'current' can turn into any category between 'Fully Paid' or 'Charged Off'.
+  So we are filtering out only those two loan status which has certain understanding. And not considering account having loan status as 'Current' in this           analysis. 
 
+## Graph Plotting
+- Loan distributed in different types
+- Home ownership wise loans
+- Monthwise Loans
+- Monthwise Verified Loans
+- Termwise Verified Loans
+- Experience wise Invested Amt
+- State wise Investment Loans
+- Installment Percentage Vs Dti
+- Loan Subgrade And Investment
+- Loan purpose & Investment Amount
+- Annual Income & Interest Rate
 
 ## Contact
-Created by [@githubvaibhav-nk] - feel free to contact me!
+Created by [@vaibhav-nk] - feel free to contact me!
 
 
 <!-- Optional -->
