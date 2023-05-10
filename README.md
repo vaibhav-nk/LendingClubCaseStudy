@@ -3,10 +3,10 @@
 
 
 ## Table of Contents
-* [Python_Libraries](#Python Libraries)
-* [Data_Understanding](#Data Understanding)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+* [Python Libraries](#Python Libraries)
+* [Data Understanding](#Data Understanding)
+* [Data Cleaning](#Data Cleaning)
+* [Data Correction](#Data Correction)
 
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
@@ -38,18 +38,28 @@
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
-## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
+## Data Cleaning
+- Missing Values
+  All the features which has only null values has no significance in this analysis, so need to be dropped from the dataset.
+  Also features which has missing values above 60% can create biased results. So these features also need to be dropped from the dataset.
+- Unique Values
+  The features which has unique values do not have any correlation with other features. So those features need to be dropped from the dataset.
+  Zip code has encrypted values so need to be dropped from dataset.
+  Desc feature requires NLP to derive useful metrics, it is dropped from dataset for time being.
+  Url feature has loan_id as meaning full information, but it is also unique value, so dropped.
+- Missing Value Imputation
+  The missing values in emp_title are filled with Untitled.
+  The missing values in emp_length & title are filled with Unknown.
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
-## Acknowledgements
+## Data Correction
 Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+- Integer Values
+  Term feature converted into data type integer by removing months keyword from data values.
+- Float Values
+  The interest rate feature converted into float data type by removing `%` sign from the data values.
+- Data Deduplication
+  There are no duplicate rows found in the dataset.
 
 
 ## Contact
