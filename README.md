@@ -3,8 +3,8 @@
 
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
+* [Python_Libraries](#Python Libraries)
+* [Data_Understanding](#Data Understanding)
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
 
@@ -19,19 +19,21 @@
 
 <!-- You can include any other section that is pertinent to your problem -->
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+## Python Libraries
+- To perform the EDA on the given dataset we are using python libraries like
+  numpy, pandas, datetime
+- For plotting the extracted data on different graphs we will using below libraries
+  seaborn, matplotlib, plotly
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+## Data Understanding
+- Shape
+  Data set has 39717 rows and 111 features.
+- Details
+  Dataset has important features which will be considered in this analysis.
+  Loan amount, Approved amount, Investor Amount (actual given loan amount), Loan term, Interest rate, Monthly installment amount, Loan Grade and Subgrades,         Borrowers employment title, Employment experience, Home ownership (Own, Rent, Mortgage), Annual Income, Income source verification status, Loan issue date, Loan   status, Purpose of loan, Title of loan, Address state code, Debt to income ratio.
+  Apart from above features this dataset also contains the behavioral features like delinquency,  Charged Off with in 12 months etc. These features are not         available at the time of loan approval, so these behavioral features are not considered in this analysis.
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
