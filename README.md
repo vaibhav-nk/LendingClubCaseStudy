@@ -10,7 +10,7 @@
 * [Derived Metrics](#Derived-Metrics)
 * [Data Filtering](#Data-Filtering)
 * [Graph Plotting](#Graph-Plotting)
-* 
+
 <!-- You can include any other section that is pertinent to your problem -->
 
 ## python-libraries
