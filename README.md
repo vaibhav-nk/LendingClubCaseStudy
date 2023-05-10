@@ -3,9 +3,9 @@
 
 
 ## Table of Contents
-* [Python Libraries](#Python Libraries)
-* [Data Understanding](#Data Understanding)
-* [Data Cleaning](#Data Cleaning)
+* [Python Libraries](#python-libraries)
+* [Data Understanding](#data-Understanding)
+* [Data Cleaning](#Data-Cleaning)
 * [Data Correction](#Data Correction)
 
 * [General Info](#general-information)
@@ -19,7 +19,7 @@
 
 <!-- You can include any other section that is pertinent to your problem -->
 
-## Python Libraries
+## python-libraries
 - To perform the EDA on the given dataset we are using python libraries like
   numpy, pandas, datetime
 - For plotting the extracted data on different graphs we will using below libraries
