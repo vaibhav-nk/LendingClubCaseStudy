@@ -6,9 +6,9 @@
 * [Python Libraries](#python-libraries)
 * [Data Understanding](#data-Understanding)
 * [Data Cleaning](#Data-Cleaning)
-* [Data Correction](#Data Correction)
+* [Data Correction](#Data-Correction)
 
-* [General Info](#general-information)
+* [Derived Metrics](#Derived-Metrics)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
@@ -53,13 +53,28 @@
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Data Correction
-Give credit here.
 - Integer Values
   Term feature converted into data type integer by removing months keyword from data values.
 - Float Values
   The interest rate feature converted into float data type by removing `%` sign from the data values.
 - Data Deduplication
   There are no duplicate rows found in the dataset.
+
+## Derived Metrics
+- Monthly Installment Amount Percentage
+  This derived metric will be used to analyze whether this higher percentage is increasing the count of default applications.
+  Code :
+  loan_df['monthly_inst_percentage'] = (loan_df['installment']/(loan_df['annual_inc']/12))*100
+- Binning
+  Continuous variable like dti, int_rate & annual_inc are binned to analyze trend with other features.
+  Code:
+  loan_df['dti_bin'], cut_bin = pd.qcut(loan_df['dti'], q = 15, retbins = True)
+  loan_df['ann_inc_bin'], cut_bin = pd.qcut(loan_df['annual_inc'], q = 20, retbins = True)
+  loan_df['int_rate_bin'], cut_bin = pd.qcut(loan_df['int_rate'], q = 20, retbins = True)
+- Create Continuous Variable
+  The feature issue_d converted into continuous feature like month and year.
+  loan_df['issue_month'] = loan_df.issue_d.apply(lambda x: int(datetime.strptime(x.split('-')[0], '%b').month))
+  loan_df['issue_year'] = loan_df.issue_d.apply(lambda x: int(x.split('-')[1]))
 
 
 ## Contact
